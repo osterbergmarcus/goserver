@@ -23,10 +23,7 @@ func handler(write http.ResponseWriter, request *http.Request) {
 
 	fmt.Println(string(requestDump))
 
-	response, err := getJSONResponse()
-	if err != nil {
-		panic(err)
-	}
+	response, _ := getJSONResponse()
 
 	fmt.Fprintf(write, string(response))
 }
